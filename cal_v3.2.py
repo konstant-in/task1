@@ -1,4 +1,3 @@
-import sys
 # Добавить в код v3.1 запись в лог-файл всех вычислений
 formula = input('Введите вычисляемое выражение в формате "число1 операция число2":')
 lst = formula.split()
@@ -37,10 +36,9 @@ else:
 
 try:
     print(operand1, oper, operand2, "=", z)
-except NameError: # operand1, operand2, z не определены
+except NameError:  # operand1, operand2, z не определены
     print("Bye")
     exit(0)
-
 
 log = open('cal.log', 'a')
 print(operand1, oper, operand2, "=", z, file=log)
